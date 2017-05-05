@@ -1,0 +1,7 @@
+﻿<div class="slds-form-element" ng-class="{'slds-has-error':(dirty && !valid)}">
+    <label class="slds-form-element__label">
+        <abbr class="slds-required" title="required" ng-if="required">*</abbr> {{label}}
+    </label>
+    <div class="fieldContainer"></div>
+    <app-field-validator ng-show="dirty && !valid" type="type" value="value" required="required" valid="valid" dirty="dirty"></app-field-validator>
+</div>

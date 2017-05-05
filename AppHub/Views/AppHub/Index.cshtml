@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppHub</title>
+    @Styles.Render("~/resource/vendor_css")
+    @Styles.Render("~/resource/engine_css")
+
+    @Scripts.Render("~/resource/vendor_js")
+    @Scripts.Render("~/resource/engine_js")
+    @Scripts.Render("~/resource/apphub_js")
+</head>
+<body ng-app="apphub" ng-controller="apphub-controller">
+    <app-header app-name="applicationName"></app-header>
+    <div style="margin-top:90px">
+        <ng-view></ng-view>
+    </div>
+   <app-footer></app-footer>
+</body>
+</html>
+
+

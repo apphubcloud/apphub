@@ -1,0 +1,9 @@
+﻿.app-footer {
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+    height: 20px;
+    background-color: #00a1e0;
+    color: white;
+}

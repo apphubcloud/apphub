@@ -155,7 +155,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\AppHubController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -163,6 +163,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppHub\js\apphub.js" />
+    <Content Include="AppHub\js\dashboard.js" />
+    <Content Include="AppHub\templates\dashboard.html" />
+    <Content Include="Content\angular\angular.js" />
     <Content Include="Content\jquery\jquery.js" />
     <Content Include="Content\slds\assets\fonts\License-for-font.txt" />
     <Content Include="Content\slds\assets\icons\action-sprite\svg\symbols.svg" />
@@ -2294,6 +2298,14 @@
     <Content Include="Content\slds\design-tokens\dist\s1-base.android.xml" />
     <Content Include="Content\slds\design-tokens\dist\s1-base.common.js" />
     <Content Include="Content\slds\scss\License-for-Sass.txt" />
+    <Content Include="Engine\css\engine.css" />
+    <Content Include="Engine\js\directive-factory.js" />
+    <Content Include="Engine\js\service-factory.js" />
+    <Content Include="Engine\templates\app-field-validator.html" />
+    <Content Include="Engine\templates\app-footer.html" />
+    <Content Include="Engine\templates\app-header.html" />
+    <Content Include="Engine\templates\app-input-field.html" />
+    <Content Include="Engine\templates\app-input-text.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\slds\assets\fonts\SalesforceSans-Bold.ttf" />
@@ -2666,15 +2678,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AppHub\css\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AppHub\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

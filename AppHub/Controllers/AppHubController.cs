@@ -6,12 +6,12 @@ using System.Web.Mvc;
 
 namespace AppHub.Controllers
 {
-    public class HomeController : Controller
+    public class AppHubController : Controller
     {
+        // GET: AppHub
         public ActionResult Index()
         {
             return View();
         }
-
     }
 }
