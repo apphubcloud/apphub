@@ -14,7 +14,8 @@ namespace AppHub
                       "~/Content/angular/angular-route.js"));
 
             bundles.Add(new StyleBundle("~/resource/vendor_css").Include(
-                      "~/Content/slds/assets/styles/salesforce-lightning-design-system.css"));
+                      "~/Content/slds/assets/styles/salesforce-lightning-design-system.css",
+                      "~/Content/font-awesome/css/font-awesome.css"));
 
             bundles.Add(new ScriptBundle("~/resource/engine_js").Include(
                       "~/Engine/js/directive-factory.js",

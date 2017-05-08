@@ -1,0 +1,33 @@
+﻿<div class="slds-form-element slds-lookup" ng-class="{'slds-is-open':show}" data-select="single">
+    <div class="slds-form-element__control">
+        <div class="slds-pill_container" ng-click="getOptions()">
+            <span class="slds-pill" ng-repeat="option in selectedOptions" style="display:inline-block">
+                <a href="javascript:void(0);" class="slds-pill__label" title="Full pill label verbiage mirrored here">{{option}}</a>
+                <button class="slds-button slds-button--icon slds-pill__remove" title="Remove" ng-click="popPill(option)">
+                    <svg class="slds-button__icon" aria-hidden="true">
+                        <use xlink:href="/Content/slds/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Remove</span>
+                </button>
+            </span>
+        </div>
+    </div>
+    <div class="slds-lookup__menu">
+        <ul class="slds-lookup__list" role="listbox">
+            <li role="presentation" ng-repeat="option in filteredOptions" ng-click="pushPill(option)">
+                <span class="slds-lookup__item-action slds-media" role="option">
+                    <div class="slds-media__body">
+                        <div class="slds-lookup__result-text">{{option}}</div>
+                    </div>
+                </span>
+            </li>
+            <li role="presentation" ng-if="filteredOptions.length==0">
+                <span class="slds-lookup__item-action slds-media" role="option">
+                    <div class="slds-media__body">
+                        <div class="slds-lookup__result-text">No options available.</div>
+                    </div>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>

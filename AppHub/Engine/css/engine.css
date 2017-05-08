@@ -7,3 +7,12 @@
     background-color: #00a1e0;
     color: white;
 }
+.slds-lookup__menu {
+    padding: 0px !important;
+}
+.slds-has-error .slds-pill_container {
+    background-color: white;
+    border-color: #c23934;
+    box-shadow: #c23934 0 0 0 1px inset;
+    background-clip: padding-box;
+}
