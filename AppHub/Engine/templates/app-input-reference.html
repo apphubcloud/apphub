@@ -1,20 +1,28 @@
-﻿<div class="slds-form-element slds-lookup" ng-class="{'slds-is-open':show}" data-select="single">
+﻿<div class="slds-form-element slds-lookup" ng-class="{'slds-is-open':(show && keyword && keyword.length>0)}" data-select="single">
     <div class="slds-form-element__control">
         <div class="slds-input-has-icon slds-input-has-icon--left">
             <i class="fa fa-search slds-input__icon slds-icon-text-default" aria-hidden="true"></i>
-            <input type="search" id="lookup-66" class="slds-lookup__search-input slds-input" placeholder="Search Accounts" aria-owns="lookup-66" role="combobox" aria-activedescendant="" aria-expanded="true" aria-autocomplete="list" />
+            <input type="text" class="slds-lookup__search-input slds-input" placeholder="Search Accounts" ng-model="keyword" ng-keyup="searchKeyword(searchKeyword(keyword?keyword:''))" ng-focus="searchKeyword(keyword?keyword:'')" />
         </div>
     </div>
     <div class="slds-lookup__menu">
         <ul class="slds-lookup__list" role="listbox">
-            <li role="presentation" ng-repeat="option in filteredOptions" ng-click="pushPill(option)">
+            <li role="presentation" ng-show="searching">
                 <span class="slds-lookup__item-action slds-media" role="option">
                     <div class="slds-media__body">
-                        <div class="slds-lookup__result-text">{{option}}</div>
+                        <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+                        <div class="slds-lookup__result-text" style="display:inline">Searching</div>
                     </div>
                 </span>
             </li>
-            <li role="presentation" ng-if="filteredOptions.length==0">
+            <li role="presentation" ng-repeat="option in options" ng-click="selectOption(option)" ng-show="!searching">
+                <span class="slds-lookup__item-action slds-media" role="option">
+                    <div class="slds-media__body">
+                        <div class="slds-lookup__result-text">{{option.label}}</div>
+                    </div>
+                </span>
+            </li>
+            <li role="presentation" ng-if="options.length==0" ng-show="!searching">
                 <span class="slds-lookup__item-action slds-media" role="option">
                     <div class="slds-media__body">
                         <div class="slds-lookup__result-text">No options available.</div>

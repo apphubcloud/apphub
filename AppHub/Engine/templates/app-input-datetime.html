@@ -1,4 +1,10 @@
 ﻿<div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
     <i class="fa fa-hourglass-half slds-input__icon slds-icon-text-default" aria-hidden="true"></i>
-    <input type="text" class="slds-input" placeholder="{{placeholder}}" />
+    <input type="text" class="slds-input" placeholder="{{placeholder}}" ng-readonly="true" ng-click="getPicker()" ng-model="dateTimeString" />
+    <div class="slds-datepicker slds-dropdown slds-dropdown--left" aria-hidden="false" ng-class="{'slds-hide':!show}">
+       <app-datepicker></app-datepicker>
+    </div>
+    <div class="slds-datepicker slds-dropdown slds-dropdown--left" aria-hidden="false" ng-class="{'slds-hide':!show}" style="padding:10px;left:286px">
+        <app-timepicker></app-timepicker>
+    </div>
 </div>

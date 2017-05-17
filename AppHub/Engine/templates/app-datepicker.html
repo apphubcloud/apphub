@@ -1,0 +1,48 @@
+﻿<div class="slds-datepicker__filter slds-grid">
+    <div class="slds-datepicker__filter--month slds-grid slds-grid--align-spread slds-grow">
+        <div class="slds-align-middle">
+            <button class="slds-button slds-button--icon-container" title="Previous Month" ng-click="setMonth(currentMonth-2)" ng-disabled="currentMonth==1">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/Content/slds/assets/icons/utility-sprite/svg/symbols.svg#left"></use>
+                </svg>
+                <span class="slds-assistive-text">Previous Month</span>
+            </button>
+        </div>
+        <h2 class="slds-align-middle" aria-live="assertive" aria-atomic="true">{{months[currentMonth-1]}}</h2>
+        <div class="slds-align-middle">
+            <button class="slds-button slds-button--icon-container" title="Next Month" ng-click="setMonth(currentMonth)" ng-disabled="currentMonth==12">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/Content/slds/assets/icons/utility-sprite/svg/symbols.svg#right"></use>
+                </svg>
+                <span class="slds-assistive-text">Next Month</span>
+            </button>
+        </div>
+    </div>
+    <div class="slds-shrink-none">
+        <label class="slds-assistive-text" for="select-01">Pick a Year</label>
+        <div class="slds-select_container">
+            <select class="slds-select" ng-options="year for year in years" ng-model="currentYear" ng-change="setYear(currentYear)"></select>
+        </div>
+    </div>
+</div>
+<table class="slds-datepicker__month" role="grid" aria-labelledby="month">
+    <thead>
+        <tr>
+            <th scope="col" ng-repeat="day in days">
+                <abbr title="{{day}}">{{day}}</abbr>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="w in data">
+            <td role="gridcell" aria-selected="false" ng-repeat="day in w" ng-class="{'slds-disabled-text':day.disabled,'slds-is-today':day.today,'slds-is-selected':day.selected}">
+                <span class="slds-day" ng-click="setDate(day.value)">{{day.label}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="7" role="gridcell">
+                <a href="javascript:void(0);" class="slds-show--inline-block slds-p-bottom--x-small" ng-click="setToday()">Today</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

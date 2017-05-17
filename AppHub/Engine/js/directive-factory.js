@@ -86,8 +86,18 @@ app.directive("appInputField", function ($server) {
                     $element.find('.fieldContainer').html($compile('<app-input-datetime placeholder="placeholder" value="value"></app-input-datetime>')($scope));
                     break;
                 case "reference":
-                    $element.find('.fieldContainer').html($compile('<app-input-reference placeholder="placeholder" value="value" records="records"></app-input-reference>')($scope));
+                    $element.find('.fieldContainer').html($compile('<app-input-reference placeholder="placeholder" value="value" search="getReferenceData(keyword,onsuccess)"></app-input-reference>')($scope));
                     break;
+            }
+            $scope.getReferenceData = function (keyword, onsuccess) {
+                $scope.data = [{ "label": "option1", "value": "option1" }, { "label": "option2", "value": "option2" }, { "label": "option3", "value": "option3" }, { "label": "option4", "value": "option4" }];
+                setTimeout(function () {
+                    var filteredData = $scope.data.filter(function (d) {
+                        return d.label.toLowerCase().includes(keyword.toLowerCase());
+                    })
+                    onsuccess(filteredData);
+                },5000)
+                
             }
         }]
     };
@@ -166,6 +176,166 @@ app.directive("appInputMultiselect", function ($server) {
         }]
     };
 });
+app.directive("appDatepicker", function ($server) {
+    return {
+        scope: {
+        },
+        templateUrl: $server.getPath() + "/Engine/templates/app-datepicker.html",
+        controller: ["$scope", function ($scope) {
+            $scope.$on('getPicker', function (event, args) {
+                $scope.getPicker();
+            });
+            $scope.initPicker = function () {
+                $scope.years = [];
+                for (var i = 1950; i <= 2050; i++) {
+                    $scope.years.push(i);
+                }
+                $scope.days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+                $scope.months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "Octomber", "November", "December"];
+            }
+            $scope.getPicker = function () {
+                $scope.currentDate = $scope.parseDateValue();
+                $scope.getCalenderData();
+            }
+            $scope.setMonth = function (m) {
+                $scope.currentDate.setMonth(m);
+                $scope.getCalenderData();
+            }
+            $scope.setYear = function (y) {
+                $scope.currentDate.setYear(y);
+                $scope.getCalenderData();
+            }
+            $scope.setDate = function (dt) {
+                $scope.dateValue = $scope.getDoubles(dt.getFullYear()) + "-" + $scope.getDoubles(dt.getMonth() + 1) + "-" + $scope.getDoubles(dt.getDate());
+                $scope.dateString = dt.toLocaleDateString();
+                $scope.$emit('setDate', {"dateValue":$scope.dateValue,"dateString":$scope.dateString});
+            }
+            $scope.getCalenderData = function () {
+                $scope.today = new Date(new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getDate());
+                if ($scope.currentDate == undefined) {
+                    $scope.currentDate = angular.copy($scope.today);
+                }
+                $scope.currentYear = $scope.currentDate.getFullYear();
+                $scope.currentMonth = $scope.currentDate.getMonth() + 1;
+                $scope.datePointer = new Date($scope.currentDate.getFullYear() + "-" + ($scope.currentDate.getMonth() + 1) + "-01");
+                $scope.datePointer.setDate($scope.datePointer.getDate() - $scope.datePointer.getDay());
+                $scope.data = [];
+                $scope.week = [];
+                while ($scope.datePointer.getMonth() != $scope.currentDate.getMonth()) {
+                    $scope.week.push({ "label": $scope.datePointer.getDate(), "disabled": true });
+                    $scope.datePointer.setDate($scope.datePointer.getDate() + 1);
+                }
+                while ($scope.datePointer.getMonth() == $scope.currentDate.getMonth()) {
+                    $scope.week.push({ "label": $scope.datePointer.getDate(), "value": angular.copy($scope.datePointer), "today": $scope.datePointer.toLocaleDateString() == $scope.today.toLocaleDateString(), "selected": $scope.parseDateValue() ? $scope.datePointer.toLocaleDateString() == $scope.parseDateValue().toLocaleDateString() : false });
+                    $scope.datePointer.setDate($scope.datePointer.getDate() + 1);
+                    if ($scope.week.length == 7) {
+                        $scope.data.push(angular.copy($scope.week));
+                        $scope.week = [];
+                    }
+                }
+                while ($scope.week.length < 7) {
+                    $scope.week.push({ "label": $scope.datePointer.getDate(), "disabled": true });
+                    $scope.datePointer.setDate($scope.datePointer.getDate() + 1);
+                }
+                $scope.data.push(angular.copy($scope.week));
+            }
+            $scope.parseDateValue = function () {
+                if ($scope.dateValue) {
+                    return new Date($scope.dateValue);
+                } else {
+                    return undefined;
+                }
+            }
+            $scope.setToday = function () {
+                $scope.setDate(new Date());
+            }
+            $scope.initPicker();
+            $scope.getDoubles = function (no) {
+                if (no < 10) {
+                    return "0" + no;
+                } else {
+                    return no + "";
+                }
+            }
+        }]
+    };
+});
+app.directive("appTimepicker", function ($server) {
+    return {
+        scope: {
+        },
+        templateUrl: $server.getPath() + "/Engine/templates/app-timepicker.html",
+        controller: ["$scope", function ($scope) {
+            $scope.$on('getPicker', function (event, args) {
+                $scope.getPicker();
+            });
+            $scope.getPicker = function () {
+                if ($scope.timeValue) {
+                    $scope.hour = $scope.getDoubles(parseInt($scope.value.split(":")[0]));
+                    $scope.min = $scope.getDoubles(parseInt($scope.value.split(":")[1]));
+                    $scope.am = $scope.value.split(" ")[1];
+                } else {
+                    $scope.hour = $scope.getDoubles(12);
+                    $scope.min = $scope.getDoubles(0);;
+                    $scope.am = "AM";
+                }
+                $scope.setTime();
+            }
+            $scope.plusHour = function () {
+                if (parseInt($scope.hour) == 12) {
+                    $scope.hour = $scope.getDoubles(1);
+                } else {
+                    $scope.hour = $scope.getDoubles(parseInt($scope.hour) + 1);
+                }
+                $scope.setTime();
+            }
+            $scope.minusHour = function () {
+                if (parseInt($scope.hour) == 1) {
+                    $scope.hour = $scope.getDoubles(12);
+                } else {
+                    $scope.hour = $scope.getDoubles(parseInt($scope.hour) - 1);
+                }
+                $scope.setTime();
+            }
+            $scope.plusMinute = function () {
+                if (parseInt($scope.min) == 59) {
+                    $scope.min = $scope.getDoubles(0);
+                } else {
+                    $scope.min = $scope.getDoubles(parseInt($scope.min) + 1);
+                }
+                $scope.setTime();
+            }
+            $scope.minusMinute = function () {
+                if (parseInt($scope.min) == 0) {
+                    $scope.min = $scope.getDoubles(59);
+                } else {
+                    $scope.min = $scope.getDoubles(parseInt($scope.min) - 1);
+                }
+                $scope.setTime();
+            }
+            $scope.changeAM = function () {
+                if ($scope.am == "AM") {
+                    $scope.am = "PM";
+                } else {
+                    $scope.am = "AM";
+                }
+                $scope.setTime();
+            }
+            $scope.setTime = function () {
+                $scope.timeValue = $scope.hour + ":" + $scope.min + " " + $scope.am;
+                $scope.timeString = $scope.hour + ":" + $scope.min + " " + $scope.am;
+                $scope.$emit('setTime', { "timeValue": $scope.timeValue, "timeString": $scope.timeString });
+            }
+            $scope.getDoubles = function (no) {
+                if (no < 10) {
+                    return "0" + no;
+                } else {
+                    return no + "";
+                }
+            }
+        }]
+    };
+});
 app.directive("appInputDate", function ($server) {
     return {
         scope: {
@@ -174,7 +344,23 @@ app.directive("appInputDate", function ($server) {
         },
         templateUrl: $server.getPath() + "/Engine/templates/app-input-date.html",
         controller: ["$scope", "$element", function ($scope, $element) {
-
+            $scope.$on('setDate', function (event, args) {
+                $scope.value = args.dateValue;
+                $scope.dateString = args.dateString;
+                $scope.show = false;
+            });
+            $scope.getPicker = function () {
+                $scope.show = true;
+                $scope.$broadcast('getPicker');
+            }
+            $(document).click(function (evt) {
+                if ($element.find(evt.target).length == 0) {
+                    $scope.show = false;
+                    if (!$scope.$$phase && !$scope.$root.$$phase) {
+                        $scope.$apply();
+                    }
+                }
+            })
         }]
     };
 });
@@ -184,7 +370,25 @@ app.directive("appInputTime", function ($server) {
             placeholder: '=',
             value: '='
         },
-        templateUrl: $server.getPath() + "/Engine/templates/app-input-time.html"
+        templateUrl: $server.getPath() + "/Engine/templates/app-input-time.html",
+        controller: ["$scope", "$element", function ($scope, $element) {
+            $scope.$on('setTime', function (event, args) {
+                $scope.value = args.timeValue;
+                $scope.timeString = args.timeString;
+            });
+            $scope.getPicker = function () {
+                $scope.show = true;
+                $scope.$broadcast('getPicker');
+            }
+            $(document).click(function (evt) {
+                if ($element.find(evt.target).length == 0) {
+                    $scope.show = false;
+                    if (!$scope.$$phase && !$scope.$root.$$phase) {
+                        $scope.$apply();
+                    }
+                }
+            })
+        }]
     };
 });
 app.directive("appInputDatetime", function ($server) {
@@ -193,15 +397,90 @@ app.directive("appInputDatetime", function ($server) {
             placeholder: '=',
             value: '='
         },
-        templateUrl: $server.getPath() + "/Engine/templates/app-input-datetime.html"
+        templateUrl: $server.getPath() + "/Engine/templates/app-input-datetime.html",
+        controller: ["$scope", "$element", function ($scope, $element) {
+            $scope.$on('setDate', function (event, args) {
+                $scope.dateValue = args.dateValue;
+                $scope.dateString = args.dateString;
+                $scope.show = false;
+                $scope.setDateTime();
+            });
+            $scope.$on('setTime', function (event, args) {
+                $scope.timeValue = args.timeValue;
+                $scope.timeString = args.timeString;
+                $scope.setDateTime();
+            });
+            $scope.setDateTime = function () {
+                if ($scope.dateValue) {
+                    $scope.value = $scope.dateValue + " " + $scope.timeValue;
+                    $scope.dateTimeString = $scope.dateString + " " + $scope.timeString;
+                }
+            }
+            $scope.getPicker = function () {
+                $scope.show = true;
+                $scope.$broadcast('getPicker');
+            }
+            $(document).click(function (evt) {
+                if ($element.find(evt.target).length == 0) {
+                    $scope.show = false;
+                    if (!$scope.$$phase && !$scope.$root.$$phase) {
+                        $scope.$apply();
+                    }
+                }
+            })
+        }]
     };
 });
 app.directive("appInputReference", function ($server) {
     return {
         scope: {
             placeholder: '=',
-            value: '='
+            value: '=',
+            search:'&'
         },
-        templateUrl: $server.getPath() + "/Engine/templates/app-input-reference.html"
+        templateUrl: $server.getPath() + "/Engine/templates/app-input-reference.html",
+        controller: ["$scope", "$element", function ($scope, $element) {
+            $scope.searchKeyword = function (keyword) {
+                $scope.show = true;
+                if (keyword.length > 0) {
+                    $scope.searching = true;
+                    $scope.search({
+                        "keyword": keyword, "onsuccess": function (options) {
+                            $scope.searching = false;
+                            $scope.options = options;
+                            $scope.mapOptions = {};
+                            options.forEach(function (option) {
+                                $scope.mapOptions[option.label] = option;
+                            })
+                            if (!$scope.$$phase && !$scope.$root.$$phase) {
+                                $scope.$apply();
+                            }
+                        }
+                    })
+                }
+            }
+            $scope.selectOption = function (option) {
+                $scope.value = option.value;
+                $scope.keyword = option.label;
+                $scope.show = false;
+            }
+            $(document).click(function (evt) {
+                if ($element.find(evt.target).length == 0) {
+                    $scope.removeBinding();
+                }
+            })
+            $scope.removeBinding = function () {
+                $scope.show = false;
+                setTimeout(function () {
+                    if (!$scope.mapOptions.hasOwnProperty($scope.keyword)) {
+                        $scope.keyword = '';
+                        if (!$scope.$$phase && !$scope.$root.$$phase) {
+                            $scope.$apply();
+                        }
+                    }
+                },1000)
+               
+            }
+        }]
     };
 });

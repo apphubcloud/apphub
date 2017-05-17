@@ -1,0 +1,29 @@
+﻿<div class="slds-grid">
+    <div class="slds-col app-time-elements">
+        <button class="slds-button slds-button--neutral" ng-click="plusHour()">
+            <i class="fa fa-chevron-up"></i>
+        </button>
+        <input type="text" class="slds-input" ng-model="hour" />
+        <button class="slds-button slds-button--neutral" ng-click="minusHour()">
+            <i class="fa fa-chevron-down"></i>
+        </button>
+    </div>
+    <div class="slds-col app-time-elements">
+        <button class="slds-button slds-button--neutral" ng-click="plusMinute()">
+            <i class="fa fa-chevron-up"></i>
+        </button>
+        <input type="text" class="slds-input" ng-model="min" />
+        <button class="slds-button slds-button--neutral" ng-click="minusMinute()">
+            <i class="fa fa-chevron-down"></i>
+        </button>
+    </div>
+    <div class="slds-col app-time-elements">
+        <button class="slds-button slds-button--neutral" ng-click="changeAM()">
+            <i class="fa fa-chevron-up"></i>
+        </button>
+        <input type="text" class="slds-input" ng-readonly="true" ng-model="am" />
+        <button class="slds-button slds-button--neutral" ng-click="changeAM()">
+            <i class="fa fa-chevron-down"></i>
+        </button>
+    </div>
+</div>

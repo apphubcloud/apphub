@@ -2307,6 +2307,7 @@
     <Content Include="Engine\css\engine.css" />
     <Content Include="Engine\js\directive-factory.js" />
     <Content Include="Engine\js\service-factory.js" />
+    <Content Include="Engine\templates\app-datepicker.html" />
     <Content Include="Engine\templates\app-field-validator.html" />
     <Content Include="Engine\templates\app-footer.html" />
     <Content Include="Engine\templates\app-header.html" />
@@ -2319,6 +2320,7 @@
     <Content Include="Engine\templates\app-input-text.html" />
     <Content Include="Engine\templates\app-input-textarea.html" />
     <Content Include="Engine\templates\app-input-time.html" />
+    <Content Include="Engine\templates\app-timepicker.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\slds\assets\fonts\SalesforceSans-Bold.ttf" />
