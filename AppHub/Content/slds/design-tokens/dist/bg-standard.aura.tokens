@@ -131,4 +131,24 @@
   <aura:token name="skillRequirement" value="rgb(250, 151, 92)" property="background,background-color" />
   <aura:token name="timeslot" value="rgb(250, 178, 76)" property="background,background-color" />
   <aura:token name="workType" value="rgb(84, 105, 141)" property="background,background-color" />
+  <aura:token name="entitlement" value="rgb(126, 139, 228)" property="background,background-color" />
+  <aura:token name="liveChat" value="rgb(248, 137, 96)" property="background,background-color" />
+  <aura:token name="shipment" value="rgb(126, 139, 228)" property="background,background-color" />
+  <aura:token name="maintenancePlan" value="rgb(42, 115, 158)" property="background,background-color" />
+  <aura:token name="maintenanceAsset" value="rgb(42, 115, 158)" property="background,background-color" />
+  <aura:token name="serviceTerritoryLocation" value="rgb(126, 139, 228)" property="background,background-color" />
+  <aura:token name="productRequest" value="rgb(136, 198, 81)" property="background,background-color" />
+  <aura:token name="productRequestLineItem" value="rgb(136, 198, 81)" property="background,background-color" />
+  <aura:token name="entityMilestone" value="rgb(244, 151, 86)" property="background,background-color" />
+  <aura:token name="caseMilestone" value="rgb(242, 207, 91)" property="background,background-color" />
+  <aura:token name="entitlementProcess" value="rgb(126, 139, 228)" property="background,background-color" />
+  <aura:token name="entitlementTemplate" value="rgb(126, 139, 228)" property="background,background-color" />
+  <aura:token name="businessHours" value="rgb(125, 195, 125)" property="background,background-color" />
+  <aura:token name="timesheet" value="rgb(126, 139, 228)" property="background,background-color" />
+  <aura:token name="timesheetEntry" value="rgb(125, 195, 125)" property="background,background-color" />
+  <aura:token name="assetRelationship" value="rgb(250, 151, 92)" property="background,background-color" />
+  <aura:token name="cms" value="rgb(136, 198, 81)" property="background,background-color" />
+  <aura:token name="leadInsights" value="rgb(34, 176, 230)" property="background,background-color" />
+  <aura:token name="quip" value="rgb(37, 180, 233)" property="background,background-color" />
+  <aura:token name="topic2" value="rgb(86, 170, 208)" property="background,background-color" />
 </aura:tokens>

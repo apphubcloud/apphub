@@ -1,0 +1,16 @@
+﻿<table class="slds-table slds-table_bordered slds-table_cell-buffer">
+    <thead>
+        <tr class="slds-text-title_caps">
+            <th scope="col" ng-repeat="column in columns">
+                <div class="slds-truncate" title="Opportunity Name">{{column.label}}</div>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="record in data">
+            <td data-label="Account Name" ng-repeat="column in columns">
+                <div class="slds-truncate" title="{{column.label}}">{{record[column.name]}}</div>
+            </td>
+        </tr>
+    </tbody>
+</table>

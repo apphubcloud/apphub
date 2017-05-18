@@ -103,6 +103,9 @@
         "stroke-width"
       ],
       "value": "0",
+      ".alias": {
+        "value": "0"
+      },
       "name": "spacingNone"
     },
     {
@@ -124,6 +127,9 @@
         "stroke-width"
       ],
       "value": "2",
+      ".alias": {
+        "value": "0.125rem"
+      },
       "name": "spacingXxxSmall"
     },
     {
@@ -145,6 +151,9 @@
         "stroke-width"
       ],
       "value": "4",
+      ".alias": {
+        "value": "0.25rem"
+      },
       "name": "spacingXxSmall"
     },
     {
@@ -166,6 +175,9 @@
         "stroke-width"
       ],
       "value": "8",
+      ".alias": {
+        "value": "0.5rem"
+      },
       "name": "spacingXSmall"
     },
     {
@@ -187,6 +199,9 @@
         "stroke-width"
       ],
       "value": "12",
+      ".alias": {
+        "value": "0.75rem"
+      },
       "name": "spacingSmall"
     },
     {
@@ -208,6 +223,9 @@
         "stroke-width"
       ],
       "value": "16",
+      ".alias": {
+        "value": "1rem"
+      },
       "name": "spacingMedium"
     },
     {
@@ -229,6 +247,9 @@
         "stroke-width"
       ],
       "value": "32",
+      ".alias": {
+        "value": "1.5rem"
+      },
       "name": "spacingLarge"
     },
     {
@@ -250,6 +271,9 @@
         "stroke-width"
       ],
       "value": "64",
+      ".alias": {
+        "value": "2rem"
+      },
       "name": "spacingXLarge"
     },
     {
@@ -271,6 +295,9 @@
         "stroke-width"
       ],
       "value": "128",
+      ".alias": {
+        "value": "3rem"
+      },
       "name": "spacingXxLarge"
     },
     {
@@ -600,6 +627,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "#FFFFFF"
+      },
       "name": "colorWhite"
     },
     {
@@ -611,6 +641,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(177, 64.7%, 51.9%)"
+      },
       "name": "colorGreenSea100"
     },
     {
@@ -622,6 +655,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(177, 61.3%, 47.1%)"
+      },
       "name": "colorGreenSea300"
     },
     {
@@ -633,6 +669,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(177, 62.6%, 41.2%)"
+      },
       "name": "colorGreenSea500"
     },
     {
@@ -644,6 +683,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(177, 65.3%, 35.7%)"
+      },
       "name": "colorGreenSea700"
     },
     {
@@ -655,6 +697,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(177, 65.3%, 30.9%)"
+      },
       "name": "colorGreenSea900"
     },
     {
@@ -666,6 +711,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(208, 93.3%, 70.1%)"
+      },
       "name": "colorBlueSky100"
     },
     {
@@ -677,6 +725,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(208, 89.6%, 61.4%)"
+      },
       "name": "colorBlueSky300"
     },
     {
@@ -688,6 +739,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(208, 84.3%, 55.3%)"
+      },
       "name": "colorBlueSky500"
     },
     {
@@ -699,6 +753,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(208, 73.9%, 48.3%)"
+      },
       "name": "colorBlueSky700"
     },
     {
@@ -710,6 +767,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(208, 77%, 41.8%)"
+      },
       "name": "colorBlueSky900"
     },
     {
@@ -721,6 +781,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(257, 83.1%, 76.3%)"
+      },
       "name": "colorPurpleRain100"
     },
     {
@@ -732,6 +795,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(257, 72.2%, 67.6%)"
+      },
       "name": "colorPurpleRain300"
     },
     {
@@ -743,6 +809,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(257, 61.2%, 58.8%)"
+      },
       "name": "colorPurpleRain500"
     },
     {
@@ -754,6 +823,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(257, 50.2%, 50%)"
+      },
       "name": "colorPurpleRain700"
     },
     {
@@ -765,6 +837,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(257, 39.2%, 42%)"
+      },
       "name": "colorPurpleRain900"
     },
     {
@@ -776,6 +851,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(210, 42.36%, 96.53%)"
+      },
       "name": "colorBlueAthens"
     },
     {
@@ -787,6 +865,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(210, 32.2%, 92.62%)"
+      },
       "name": "colorBlueSparta"
     },
     {
@@ -798,6 +879,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(210, 30.56%, 82.72%)"
+      },
       "name": "colorBlueRome"
     },
     {
@@ -809,6 +893,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(210, 28.57%, 72%)"
+      },
       "name": "colorBlueSpider"
     },
     {
@@ -820,6 +907,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(210, 25.93%, 59.5%)"
+      },
       "name": "colorBlueGhost"
     },
     {
@@ -831,6 +921,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(210, 25%, 48%)"
+      },
       "name": "colorBlueAluminium"
     },
     {
@@ -842,6 +935,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(210, 33.33%, 37.5%)"
+      },
       "name": "colorBlueRollingstone"
     },
     {
@@ -853,6 +949,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(210, 42.86%, 28%)"
+      },
       "name": "colorBlueRhino"
     },
     {
@@ -864,6 +963,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(210, 53.85%, 19.5%)"
+      },
       "name": "colorBlueZodiac"
     },
     {
@@ -875,6 +977,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "hsl(210, 66.67%, 12%)"
+      },
       "name": "colorBlueBigstoneBlue"
     },
     {
@@ -886,6 +991,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "#FFB75D"
+      },
       "name": "colorOrangeAlert"
     },
     {
@@ -897,6 +1005,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "#D4504C"
+      },
       "name": "colorRedError"
     },
     {
@@ -908,6 +1019,9 @@
         "background-color"
       ],
       "comment": "",
+      ".alias": {
+        "value": "#4BCA81"
+      },
       "name": "colorGreenSuccess"
     },
     {
@@ -919,6 +1033,9 @@
         "background-color"
       ],
       "comment": "Link color (508)",
+      ".alias": {
+        "value": "#0070D2"
+      },
       "name": "colorBlueScience"
     },
     {
@@ -930,6 +1047,9 @@
         "background-color"
       ],
       "comment": "Hover and focus link color",
+      ".alias": {
+        "value": "#005FB2"
+      },
       "name": "colorBlueEndeavour"
     },
     {
@@ -941,6 +1061,9 @@
         "background-color"
       ],
       "comment": "Active link color",
+      ".alias": {
+        "value": "#00396B"
+      },
       "name": "colorBlueMidnightBlue"
     },
     {
@@ -952,6 +1075,9 @@
         "background-color"
       ],
       "comment": "Disabled link color",
+      ".alias": {
+        "value": "#16325C"
+      },
       "name": "colorBlueBiscay"
     }
   ]

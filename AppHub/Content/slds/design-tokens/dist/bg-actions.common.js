@@ -72,6 +72,7 @@ module.exports = {
   actionEvernote: "rgb(134, 200, 111)",
   actionDocusign: "rgb(80, 128, 219)",
   actionMore: "rgb(98, 183, 237)",
+  // Use ACTION_NEW_NOTEBOOK instead.
   actionNotebook: "rgb(230, 212, 120)",
   actionNewNotebook: "rgb(230, 212, 120)",
   actionPreview: "rgb(127, 141, 225)",
@@ -191,5 +192,7 @@ module.exports = {
   actionLogEvent: "rgb(108, 161, 233)",
   actionAddRelationship: "rgb(98, 183, 237)",
   actionRemoveRelationship: "rgb(239, 110, 100)",
-  actionViewRelationship: "rgb(60, 151, 221)"
+  actionViewRelationship: "rgb(60, 151, 221)",
+  actionAddFile: "rgb(126, 139, 228)",
+  actionAddPhotoVideo: "rgb(0, 205, 192)"
 };

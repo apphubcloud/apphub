@@ -130,6 +130,9 @@
       ],
       "value": "10",
       "comment": "Extra extra small text.",
+      ".alias": {
+        "value": ".625rem"
+      },
       "name": "fontSizeTextXxSmall"
     },
     {
@@ -141,6 +144,9 @@
       ],
       "value": "12",
       "comment": "Extra small body text.",
+      ".alias": {
+        "value": ".75rem"
+      },
       "name": "fontSizeTextXSmall"
     },
     {
@@ -152,6 +158,9 @@
       ],
       "value": "13",
       "comment": "Small body text.",
+      ".alias": {
+        "value": ".8125rem"
+      },
       "name": "fontSizeTextSmall"
     },
     {
@@ -163,6 +172,9 @@
       ],
       "value": "16",
       "comment": "Medium body text.",
+      ".alias": {
+        "value": "1rem"
+      },
       "name": "fontSizeTextMedium"
     },
     {
@@ -174,6 +186,9 @@
       ],
       "value": "18",
       "comment": "Large body text.",
+      ".alias": {
+        "value": "1.125rem"
+      },
       "name": "fontSizeTextLarge"
     },
     {
@@ -185,6 +200,9 @@
       ],
       "value": "20",
       "comment": "Extra large body text.",
+      ".alias": {
+        "value": "1.25rem"
+      },
       "name": "fontSizeTextXLarge"
     },
     {
@@ -196,6 +214,9 @@
       ],
       "value": "10",
       "comment": "Extra Extra small headings.",
+      ".alias": {
+        "value": ".625rem"
+      },
       "name": "fontSizeHeadingXxSmall"
     },
     {
@@ -207,6 +228,9 @@
       ],
       "value": "12",
       "comment": "Extra small headings.",
+      ".alias": {
+        "value": ".75rem"
+      },
       "name": "fontSizeHeadingXSmall"
     },
     {
@@ -218,6 +242,9 @@
       ],
       "value": "14",
       "comment": "Small headings.",
+      ".alias": {
+        "value": ".875rem"
+      },
       "name": "fontSizeHeadingSmall"
     },
     {
@@ -229,6 +256,9 @@
       ],
       "value": "18",
       "comment": "Medium headings.",
+      ".alias": {
+        "value": "1.125rem"
+      },
       "name": "fontSizeHeadingMedium"
     },
     {
@@ -240,6 +270,9 @@
       ],
       "value": "24",
       "comment": "Large headings.",
+      ".alias": {
+        "value": "1.5rem"
+      },
       "name": "fontSizeHeadingLarge"
     },
     {
@@ -251,6 +284,9 @@
       ],
       "value": "32",
       "comment": "Extra large headings.",
+      ".alias": {
+        "value": "2rem"
+      },
       "name": "fontSizeHeadingXLarge"
     },
     {
@@ -307,6 +343,9 @@
       "value": "'Salesforce Sans', Arial, sans-serif",
       "deprecated": true,
       "comment": "Deprecated: use FONT_FAMILY_TEXT instead for regular body text and FONT_FAMILY_HEADING for headings.",
+      ".alias": {
+        "value": "'Salesforce Sans', Arial, sans-serif"
+      },
       "name": "fontFamily"
     },
     {
@@ -317,6 +356,9 @@
         "font-family"
       ],
       "value": "'Salesforce Sans', Arial, sans-serif",
+      ".alias": {
+        "value": "'Salesforce Sans', Arial, sans-serif"
+      },
       "name": "fontFamilyText"
     },
     {
@@ -327,6 +369,9 @@
         "font-family"
       ],
       "value": "'Salesforce Sans', Arial, sans-serif",
+      ".alias": {
+        "value": "'Salesforce Sans', Arial, sans-serif"
+      },
       "name": "fontFamilyHeading"
     }
   ]

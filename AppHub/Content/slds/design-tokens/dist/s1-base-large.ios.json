@@ -10,6 +10,9 @@
       ],
       "value": "rgb(244, 246, 249)",
       "comment": "Default Card component background color.",
+      ".alias": {
+        "value": "#F4F6F9"
+      },
       "name": "cardColorBackground"
     },
     {

@@ -1931,6 +1931,26 @@
       ],
       "value": "rgb(60, 151, 221)",
       "name": "actionViewRelationship"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "actionAddFile"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(0, 205, 192)",
+      "name": "actionAddPhotoVideo"
     }
   ]
 }

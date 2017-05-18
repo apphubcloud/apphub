@@ -1,3 +1,6 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
 global:
   type: color
   category: background-color
@@ -12,7 +15,7 @@ props:
     value: '{!LINK_WATER}'
     comment: Default background color for the whole app.
   COLOR_BACKGROUND_ALT:
-    value: '{!WHITE}'
+    value: '{!ROMANCE}'
     comment: Second default background color for the app.
   COLOR_BACKGROUND_ALT_2:
     value: '{!WHITE_LILAC}'
@@ -236,7 +239,7 @@ props:
     value: '{!KASHMIR_BLUE_TRANSPARENT_95}'
     comment: Background color for toast messaging.
   COLOR_BACKGROUND_TOAST_SUCCESS:
-    value: '{!SALEM_TRANSPARENT_95}'
+    value: '{!SALEM}'
     comment: Background color for success toast messaging.
   COLOR_BACKGROUND_TOAST_ERROR:
     value: '{!FLUSH_MAHOGANY_TRANSPARENT_95}'

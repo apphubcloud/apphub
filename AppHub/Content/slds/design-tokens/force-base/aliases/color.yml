@@ -1,3 +1,6 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
 aliases:
   TRANSPARENT: "transparent"
   BLACK_TRANSPARENT_05: "rgba(0, 0, 0, 0.05)"
@@ -112,8 +115,11 @@ aliases:
   CINNAMON: "#844800"
   FUN_GREEN: "#028048"
   CERULEAN: "#00A1DF"
-  MYSTIC: "#DFE4EE"
+  MYSTIC: "#E4E9F3"
   TOREA_BAY: "#0B2399"
   EBONY_CLAY: "#2c3646"
   OXFORD_BLUE: "#333e4f"
   RIVER_BED: "#414c5e"
+  MISCHKA: "#CED5E1"
+  SOLITUDE: "#E8ECF3"
+  ROMANCE: "#FDFDFD"

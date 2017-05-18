@@ -12,9 +12,13 @@ $analytics-cloud-map: (
   "spacing-large": (2rem),
   "spacing-x-large": (4rem),
   "spacing-xx-large": (8rem),
+  // font-face should be 'Salesforce Sans'.
   "font-family-body": ('Salesforce Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif),
+  // Salesforce Sans Light
   "font-weight-light": (300),
+  // Salesforce Sans Regular
   "font-weight-regular": (400),
+  // Salesforce Sans Bold
   "font-weight-bold": (700),
   "font-size-x-small": (0.625rem),
   "font-size-small": (0.75rem),
@@ -31,9 +35,13 @@ $analytics-cloud-map: (
   "line-height-reset": (1),
   "line-height-heading": (1.25),
   "line-height-text": (1.5),
+  // 448px, for phone devices and larger.
   "mq-small": (only screen and (min-width: 28em)),
+  // 768px, for phone devices and larger.
   "mq-medium": (only screen and (min-width: 48em)),
+  // 1024px, for tablet devices and larger.
   "mq-large": (only screen and (min-width: 64em)),
+  // 1280px, for desktop screens and larger.
   "mq-x-large": (only screen and (min-width: 80em)),
   "timing-1": (.1s),
   "timing-2": (.2s),
@@ -70,8 +78,12 @@ $analytics-cloud-map: (
   "color-orange-alert": (rgb(255, 183, 93)),
   "color-red-error": (rgb(212, 80, 76)),
   "color-green-success": (rgb(75, 202, 129)),
+  // Link color (508)
   "color-blue-science": (rgb(0, 112, 210)),
+  // Hover and focus link color
   "color-blue-endeavour": (rgb(0, 95, 178)),
+  // Active link color
   "color-blue-midnight-blue": (rgb(0, 57, 107)),
+  // Disabled link color
   "color-blue-biscay": (rgb(22, 50, 92))
 );

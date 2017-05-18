@@ -109,25 +109,6 @@
         "padding*",
         "transform"
       ],
-      "value": "628px",
-      "comment": "Maximum height for action overflow menu so that it's not full-screen for tablet initially.",
-      "name": "maxHeightActionOverflowMenu"
-    },
-    {
-      "type": "size",
-      "category": "sizing",
-      "cssProperties": [
-        "*width",
-        "*height",
-        "*flex*",
-        "top",
-        "right",
-        "bottom",
-        "left",
-        "margin*",
-        "padding*",
-        "transform"
-      ],
       "value": "144px",
       "comment": "Maximum height for photos and such in cards.",
       "deprecated": true,
@@ -152,44 +133,6 @@
       "comment": "Maximum height for brand logos in header.",
       "deprecated": true,
       "name": "maxHeightHeaderBrand"
-    },
-    {
-      "type": "size",
-      "category": "sizing",
-      "cssProperties": [
-        "*width",
-        "*height",
-        "*flex*",
-        "top",
-        "right",
-        "bottom",
-        "left",
-        "margin*",
-        "padding*",
-        "transform"
-      ],
-      "value": "600px",
-      "comment": "Maximum width for action icons in action bar.",
-      "name": "maxWidthActionBar"
-    },
-    {
-      "type": "size",
-      "category": "sizing",
-      "cssProperties": [
-        "*width",
-        "*height",
-        "*flex*",
-        "top",
-        "right",
-        "bottom",
-        "left",
-        "margin*",
-        "padding*",
-        "transform"
-      ],
-      "value": "120px",
-      "comment": "Max-width of an action bar item",
-      "name": "maxWidthActionBarItem"
     },
     {
       "type": "size",

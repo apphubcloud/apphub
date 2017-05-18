@@ -1320,6 +1320,206 @@
       ],
       "value": "rgb(84, 105, 141)",
       "name": "workType"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "entitlement"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(248, 137, 96)",
+      "name": "liveChat"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "shipment"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(42, 115, 158)",
+      "name": "maintenancePlan"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(42, 115, 158)",
+      "name": "maintenanceAsset"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "serviceTerritoryLocation"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(136, 198, 81)",
+      "name": "productRequest"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(136, 198, 81)",
+      "name": "productRequestLineItem"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(244, 151, 86)",
+      "name": "entityMilestone"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(242, 207, 91)",
+      "name": "caseMilestone"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "entitlementProcess"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "entitlementTemplate"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(125, 195, 125)",
+      "name": "businessHours"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(126, 139, 228)",
+      "name": "timesheet"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(125, 195, 125)",
+      "name": "timesheetEntry"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(250, 151, 92)",
+      "name": "assetRelationship"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(136, 198, 81)",
+      "name": "cms"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(34, 176, 230)",
+      "name": "leadInsights"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(37, 180, 233)",
+      "name": "quip"
+    },
+    {
+      "category": "background-color",
+      "type": "color",
+      "cssProperties": [
+        "background",
+        "background-color"
+      ],
+      "value": "rgb(86, 170, 208)",
+      "name": "topic2"
     }
   ]
 }

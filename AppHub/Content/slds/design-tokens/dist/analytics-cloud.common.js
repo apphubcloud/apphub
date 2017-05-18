@@ -12,9 +12,13 @@ module.exports = {
   spacingLarge: "2rem",
   spacingXLarge: "4rem",
   spacingXxLarge: "8rem",
+  // font-face should be 'Salesforce Sans'.
   fontFamilyBody: "'Salesforce Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+  // Salesforce Sans Light
   fontWeightLight: "300",
+  // Salesforce Sans Regular
   fontWeightRegular: "400",
+  // Salesforce Sans Bold
   fontWeightBold: "700",
   fontSizeXSmall: "0.625rem",
   fontSizeSmall: "0.75rem",
@@ -31,9 +35,13 @@ module.exports = {
   lineHeightReset: "1",
   lineHeightHeading: "1.25",
   lineHeightText: "1.5",
+  // 448px, for phone devices and larger.
   mqSmall: "only screen and (min-width: 28em)",
+  // 768px, for phone devices and larger.
   mqMedium: "only screen and (min-width: 48em)",
+  // 1024px, for tablet devices and larger.
   mqLarge: "only screen and (min-width: 64em)",
+  // 1280px, for desktop screens and larger.
   mqXLarge: "only screen and (min-width: 80em)",
   timing1: ".1s",
   timing2: ".2s",
@@ -70,8 +78,12 @@ module.exports = {
   colorOrangeAlert: "rgb(255, 183, 93)",
   colorRedError: "rgb(212, 80, 76)",
   colorGreenSuccess: "rgb(75, 202, 129)",
+  // Link color (508)
   colorBlueScience: "rgb(0, 112, 210)",
+  // Hover and focus link color
   colorBlueEndeavour: "rgb(0, 95, 178)",
+  // Active link color
   colorBlueMidnightBlue: "rgb(0, 57, 107)",
+  // Disabled link color
   colorBlueBiscay: "rgb(22, 50, 92)"
 };

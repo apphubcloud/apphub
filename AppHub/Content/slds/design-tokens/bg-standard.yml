@@ -1,3 +1,6 @@
+# Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
+# Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
+
 global:
   category: background-color
   type: color
@@ -270,3 +273,43 @@ props:
     value: '#FAB24C'
   WORK_TYPE:
     value: '#54698D'
+  ENTITLEMENT:
+    value: '#7E8BE4'
+  LIVE_CHAT:
+    value: '#F88960'
+  SHIPMENT:
+    value: '#7E8BE4'
+  MAINTENANCE_PLAN:
+    value: '#2A739E'
+  MAINTENANCE_ASSET:
+    value: '#2A739E'
+  SERVICE_TERRITORY_LOCATION:
+    value: '#7E8BE4'
+  PRODUCT_REQUEST:
+    value: '#88C651'
+  PRODUCT_REQUEST_LINE_ITEM:
+    value: '#88C651'
+  ENTITY_MILESTONE:
+    value: '#F49756'
+  CASE_MILESTONE:
+    value: '#F2CF5B'
+  ENTITLEMENT_PROCESS:
+    value: '#7E8BE4'
+  ENTITLEMENT_TEMPLATE:
+    value: '#7E8BE4'
+  BUSINESS_HOURS:
+    value: '#7DC37D'
+  TIMESHEET:
+    value: '#7E8BE4'
+  TIMESHEET_ENTRY:
+    value: '#7DC37D'
+  ASSET_RELATIONSHIP:
+    value: '#FA975C'
+  CMS:
+    value: '#88C651'
+  LEAD_INSIGHTS:
+    value: '#22B0E6'
+  QUIP:
+    value: '#25B4E9'
+  TOPIC2:
+    value: '#56AAD0'

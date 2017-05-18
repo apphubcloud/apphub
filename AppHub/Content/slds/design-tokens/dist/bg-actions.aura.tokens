@@ -192,4 +192,6 @@
   <aura:token name="actionAddRelationship" value="rgb(98, 183, 237)" property="background,background-color" />
   <aura:token name="actionRemoveRelationship" value="rgb(239, 110, 100)" property="background,background-color" />
   <aura:token name="actionViewRelationship" value="rgb(60, 151, 221)" property="background,background-color" />
+  <aura:token name="actionAddFile" value="rgb(126, 139, 228)" property="background,background-color" />
+  <aura:token name="actionAddPhotoVideo" value="rgb(0, 205, 192)" property="background,background-color" />
 </aura:tokens>

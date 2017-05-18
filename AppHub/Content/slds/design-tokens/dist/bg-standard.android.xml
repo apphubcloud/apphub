@@ -132,4 +132,24 @@
   <color name="SKILL_REQUIREMENT" category="background-color">#fffa975c</color>
   <color name="TIMESLOT" category="background-color">#fffab24c</color>
   <color name="WORK_TYPE" category="background-color">#ff54698d</color>
+  <color name="ENTITLEMENT" category="background-color">#ff7e8be4</color>
+  <color name="LIVE_CHAT" category="background-color">#fff88960</color>
+  <color name="SHIPMENT" category="background-color">#ff7e8be4</color>
+  <color name="MAINTENANCE_PLAN" category="background-color">#ff2a739e</color>
+  <color name="MAINTENANCE_ASSET" category="background-color">#ff2a739e</color>
+  <color name="SERVICE_TERRITORY_LOCATION" category="background-color">#ff7e8be4</color>
+  <color name="PRODUCT_REQUEST" category="background-color">#ff88c651</color>
+  <color name="PRODUCT_REQUEST_LINE_ITEM" category="background-color">#ff88c651</color>
+  <color name="ENTITY_MILESTONE" category="background-color">#fff49756</color>
+  <color name="CASE_MILESTONE" category="background-color">#fff2cf5b</color>
+  <color name="ENTITLEMENT_PROCESS" category="background-color">#ff7e8be4</color>
+  <color name="ENTITLEMENT_TEMPLATE" category="background-color">#ff7e8be4</color>
+  <color name="BUSINESS_HOURS" category="background-color">#ff7dc37d</color>
+  <color name="TIMESHEET" category="background-color">#ff7e8be4</color>
+  <color name="TIMESHEET_ENTRY" category="background-color">#ff7dc37d</color>
+  <color name="ASSET_RELATIONSHIP" category="background-color">#fffa975c</color>
+  <color name="CMS" category="background-color">#ff88c651</color>
+  <color name="LEAD_INSIGHTS" category="background-color">#ff22b0e6</color>
+  <color name="QUIP" category="background-color">#ff25b4e9</color>
+  <color name="TOPIC2" category="background-color">#ff56aad0</color>
 </resources>

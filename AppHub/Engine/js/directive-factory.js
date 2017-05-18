@@ -484,3 +484,21 @@ app.directive("appInputReference", function ($server) {
         }]
     };
 });
+app.directive("appTable", function ($server) {
+    return {
+        scope: {
+            data: '=',
+            columns: '='
+        },
+        templateUrl: $server.getPath() + "/Engine/templates/app-table.html"
+    };
+});
+app.directive("appDataTable", function ($server) {
+    return {
+        scope: {
+            data: '=',
+            columns: '='
+        },
+        templateUrl: $server.getPath() + "/Engine/templates/app-data-table.html"
+    };
+});

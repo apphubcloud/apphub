@@ -193,4 +193,6 @@
   <color name="ACTION_ADD_RELATIONSHIP" category="background-color">#ff62b7ed</color>
   <color name="ACTION_REMOVE_RELATIONSHIP" category="background-color">#ffef6e64</color>
   <color name="ACTION_VIEW_RELATIONSHIP" category="background-color">#ff3c97dd</color>
+  <color name="ACTION_ADD_FILE" category="background-color">#ff7e8be4</color>
+  <color name="ACTION_ADD_PHOTO_VIDEO" category="background-color">#ff00cdc0</color>
 </resources>

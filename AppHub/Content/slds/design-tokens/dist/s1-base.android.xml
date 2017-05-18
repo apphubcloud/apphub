@@ -5,11 +5,8 @@
   <property name="HEIGHT_HEADER" category="sizing">44</property>
   <property name="HEIGHT_INPUT" category="sizing">30</property>
   <property name="HEIGHT_OVERFLOW_START" category="sizing">144px</property>
-  <property name="MAX_HEIGHT_ACTION_OVERFLOW_MENU" category="sizing">628px</property>
   <property name="MAX_HEIGHT_CARD_MEDIA" category="sizing">144px</property>
   <property name="MAX_HEIGHT_HEADER_BRAND" category="sizing">32px</property>
-  <property name="MAX_WIDTH_ACTION_BAR" category="sizing">600px</property>
-  <property name="MAX_WIDTH_ACTION_BAR_ITEM" category="sizing">120px</property>
   <property name="MAX_WIDTH_ACTION_BAR_WITH_LABELS" category="sizing">320px</property>
   <property name="MAX_WIDTH_ACTION_OVERFLOW_MENU" category="sizing">512px</property>
   <property name="MAX_WIDTH_HEADER_BRAND" category="sizing">156px</property>
