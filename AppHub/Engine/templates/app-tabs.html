@@ -1,0 +1,8 @@
+﻿<div class="slds-tabs_default">
+    <ul class="slds-tabs_default__nav" role="tablist">
+        <li class="slds-tabs_default__item" title="Item One" role="presentation" ng-repeat="tab in tabs" ng-class="{'slds-is-active':tab.active}">
+            <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" ng-click="selectTab($index);">{{tab.label}}</a>
+        </li>
+    </ul>
+    <ng-transclude></ng-transclude>
+</div>

@@ -1,25 +1,35 @@
-﻿<div class="slds-grid slds-wrap">
-    <div class="slds-size_1-of-1">
+﻿<div class="slds-grid slds-wrap" style="width:100%">
+    <div class="slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--2-of-3" style="padding:5px" role="group">
+        <app-button-group>
+            <app-button label="{{action.label}}" type="neutral" ng-repeat="action in actions" click="action.click()"></app-button>
+        </app-button-group>
+    </div>
+    <div class="slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3" style="padding:5px">
         <div class="slds-grid slds-wrap">
-            <div class="slds-size_1-of-2">
-                Actions
+            <div class="slds-size--7-of-8" style="padding-right:5px">
+                <div class="{!'slds-form-element '+(v.showSearch?'':'slds-hide')}">
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
+                        <i class="fa fa-search slds-input__icon slds-icon-text-default" aria-hidden="true"></i>
+                        <input type="text" class="slds-input" placeholder="Search" ng-model="keyword" ng-keyup="search()" />
+                    </div>
+                </div>
             </div>
-            <div class="slds-size_1-of-2">
-                Search
+            <div class="slds-size--1-of-8">
+                <app-input-select options="pageSizes" value="pageSize" change="pageSizeChange()"></app-input-select>
             </div>
         </div>
     </div>
-    <div class="slds-size_1-of-1">
-        <app-table data="data" columns="columns"></app-table>
+    <div class="slds-size--1-of-1" style="padding:5px">
+        <app-table data="pagedData" columns="columns"></app-table>
     </div>
-    <div class="slds-size_1-of-1">
-        <div class="slds-grid slds-wrap">
-            <div class="slds-size_1-of-2">
-                Records
-            </div>
-            <div class="slds-size_1-of-2">
-                Pagination
-            </div>
-        </div>
+    <div class="slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2" style="padding:5px">
+        Showing {{filteredData.length>0?((currentPage * pageSize)-pageSize):0}}-{{filteredData.length>0?(((currentPage * pageSize)-pageSize)+pagedData.length):0}} of {{filteredData.length}} records...
+    </div>
+    <div class="slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-2" style="padding:5px;text-align:right">
+        <app-button label="First" type="neutral" disabled="currentPage==1" click="first()"></app-button>
+        <app-button label="Prev" type="neutral" disabled="currentPage==1" click="prev()"></app-button>
+        <select class="slds-select" style="width: 50px;height: 32px;margin: 0px 4px;" ng-options="page as page for page in pages" ng-model="currentPage" ng-change="setTableData()"></select>
+        <app-button label="Next" type="neutral" disabled="currentPage==pages.length" click="next()"></app-button>
+        <app-button label="Last" type="neutral" disabled="currentPage==pages.length" click="last()"></app-button>
     </div>
 </div>

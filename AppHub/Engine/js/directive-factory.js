@@ -125,7 +125,8 @@ app.directive("appInputSelect", function ($server) {
         scope: {
             placeholder: '=',
             value: '=',
-            options: '='
+            options: '=',
+            change: '&'
         },
         templateUrl: $server.getPath() + "/Engine/templates/app-input-select.html"
     };
@@ -484,6 +485,27 @@ app.directive("appInputReference", function ($server) {
         }]
     };
 });
+app.directive("appButton", function ($server) {
+    return {
+        replace: true,
+        scope: {
+            label: '@',
+            type: '@',
+            click: '&',
+            disabled: '='
+        },
+        templateUrl: $server.getPath() + "/Engine/templates/app-button.html"
+    };
+});
+app.directive("appButtonGroup", function ($server) {
+    return {
+        transclude: true,
+        replace: true,
+        scope: {
+        },
+        templateUrl: $server.getPath() + "/Engine/templates/app-button-group.html"
+    };
+});
 app.directive("appTable", function ($server) {
     return {
         scope: {
@@ -497,8 +519,104 @@ app.directive("appDataTable", function ($server) {
     return {
         scope: {
             data: '=',
-            columns: '='
+            columns: '=',
+            actions: '='
         },
-        templateUrl: $server.getPath() + "/Engine/templates/app-data-table.html"
+        templateUrl: $server.getPath() + "/Engine/templates/app-data-table.html",
+        controller: ["$scope", function ($scope) {
+            $scope.pageSizes = [5, 10, 20, 50, 100];
+            $scope.pageSize = 5;
+            $scope.currentPage = 1;
+            $scope.setTableData = function () {
+                $scope.filteredData = $scope.getFilteredData();
+                $scope.pages = [];
+                for (var i = 1; i <= Math.ceil($scope.filteredData.length / $scope.pageSize) ;i++){
+                    $scope.pages.push(i);
+                }
+                $scope.offset = (($scope.currentPage * $scope.pageSize) - $scope.pageSize);
+                $scope.pagedData = $scope.filteredData.slice($scope.offset, ($scope.offset + $scope.pageSize));
+            }
+            $scope.getFilteredData = function () {
+                if ($scope.keyword && $scope.keyword != '') {
+                    var filteredData = $scope.data.filter(function (record) {
+                        for (var i = 0; i < $scope.columns.length; i++) {
+                            if (record[$scope.columns[i].name] && (record[$scope.columns[i].name] + '').toLowerCase().includes($scope.keyword.toLowerCase())) {
+                                return true;
+                            }
+                        }
+                    })
+                    return filteredData;
+                } else {
+                    return $scope.data;
+                }
+            }
+            $scope.search = function () {
+                $scope.currentPage = 1;
+                $scope.setTableData();
+            }
+            $scope.pageSizeChange = function () {
+                $scope.currentPage = 1;
+                $scope.setTableData();
+            }
+            $scope.first = function () {
+                $scope.currentPage = 1;
+                $scope.setTableData();
+            }
+            $scope.prev = function () {
+                $scope.currentPage = $scope.currentPage - 1;
+                $scope.setTableData();
+            }
+            $scope.next = function () {
+                $scope.currentPage = $scope.currentPage + 1;
+                $scope.setTableData();
+            }
+            $scope.last = function () {
+                $scope.currentPage = $scope.pages.length;
+                $scope.setTableData();
+            }
+            $scope.setTableData();
+        }]
+    };
+});
+app.directive("appTabs", function ($server) {
+    return {
+        transclude: true,
+        scope: {
+        },
+        templateUrl: $server.getPath() + "/Engine/templates/app-tabs.html",
+        controllerAs: 'tabs',
+        controller: ["$scope", function ($scope) {
+            $scope.tabs = [];
+            $scope.selectTab = function selectTab(index) {
+                for (var i = 0; i < $scope.tabs.length; i++) {
+                    $scope.tabs[i].active = false;
+                }
+                $scope.tabs[index].active = true;
+            };
+            $scope.$on('addTab', function (event, args) {
+                $scope.tabs.push(args.tab);
+            });
+            $scope.$watchCollection("tabs", function () {
+                if ($scope.tabs.length > 0) {
+                    $scope.selectTab(0);
+                }
+            })
+        }]
+    };
+});
+app.directive("appTab", function ($server) {
+    return {
+        transclude: true,
+        scope: {
+            label:'@'
+        },
+        templateUrl: $server.getPath() + "/Engine/templates/app-tab.html",
+        controller:["$scope", function ($scope) {
+            $scope.tab = {
+                label: $scope.label,
+                active: false
+            };
+            $scope.$emit('addTab', { "tab": $scope.tab });
+        }]
     };
 });

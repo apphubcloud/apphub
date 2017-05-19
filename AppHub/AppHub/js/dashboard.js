@@ -2,5 +2,9 @@
 app.controller("dashboard-controller", ["$scope", function ($scope) {
     $scope.msg = "Route"
     $scope.data = [{ "Id": "1", "Name": "Ajay" }, { "Id": "1", "Name": "Ajay" }, { "Id": "1", "Name": "Ajay" }, { "Id": "1", "Name": "Ajay" }];
-    $scope.columns = [{ "name": "Id", "label": "Id" }, { "name": "Name", "label": "Name" }]
+    $scope.columns = [{ "name": "Id", "label": "Id" }, { "name": "Name", "label": "Name" }];
+    $scope.edit = function () {
+        alert('edit');
+    }
+    $scope.actions = [{ "label": "Edit", "click": $scope.edit }]; 
 }])
