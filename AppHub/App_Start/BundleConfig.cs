@@ -19,7 +19,8 @@ namespace AppHub
 
             bundles.Add(new ScriptBundle("~/resource/engine_js").Include(
                       "~/Engine/js/directive-factory.js",
-                      "~/Engine/js/service-factory.js"));
+                      "~/Engine/js/service-factory.js",
+                      "~/Engine/js/engine.js"));
 
             bundles.Add(new StyleBundle("~/resource/engine_css").Include(
                       "~/Engine/css/engine.css"));

@@ -95,15 +95,15 @@
                     </button>
                 </div>
                 <span class="slds-context-bar__label-action slds-context-bar__app-name">
-                    <span class="slds-truncate" title="App Name">AppHub</span>
+                    <span class="slds-truncate" title="App Name">{{name}}</span>
                 </span>
             </div>
         </div>
         <nav class="slds-context-bar__secondary" role="navigation">
             <ul class="slds-grid">
-                <li class="slds-context-bar__item">
-                    <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Home">
-                        <span class="slds-truncate" title="Home">Home</span>
+                <li class="slds-context-bar__item" ng-repeat="tab in tabs">
+                    <a href="{{tab.path}}" class="slds-context-bar__label-action" title="{{tab.label}}">
+                        <span class="slds-truncate" title="Home">{{tab.label}}</span>
                     </a>
                 </li>
             </ul>

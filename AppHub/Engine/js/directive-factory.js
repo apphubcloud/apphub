@@ -2,7 +2,8 @@
 app.directive("appHeader", function ($server) {
     return {
         scope:{
-            appName:"="
+            name: "=",
+            tabs: "="
         },
         templateUrl: $server.getPath() + "/Engine/templates/app-header.html"
     };

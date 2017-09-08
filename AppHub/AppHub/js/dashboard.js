@@ -1,10 +1,8 @@
-﻿var app = angular.module("dashboard", []);
-app.controller("dashboard-controller", ["$scope", function ($scope) {
-    $scope.msg = "Route"
-    $scope.data = [{ "Id": "1", "Name": "Ajay" }, { "Id": "1", "Name": "Ajay" }, { "Id": "1", "Name": "Ajay" }, { "Id": "1", "Name": "Ajay" }];
-    $scope.columns = [{ "name": "Id", "label": "Id" }, { "name": "Name", "label": "Name" }];
-    $scope.edit = function () {
-        alert('edit');
-    }
-    $scope.actions = [{ "label": "Edit", "click": $scope.edit }]; 
+﻿var app = angular.module("dashboard", ["engine"]);
+app.controller("dashboard-controller", ["$scope","$engine", function ($scope,$engine) {
+    $engine.test({ "testArgs": "Sweetu" }, function (reponse) {
+        alert(response);
+    }, function (error) {
+        alert(error);
+    })
 }])
