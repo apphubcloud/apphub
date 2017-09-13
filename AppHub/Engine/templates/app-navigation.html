@@ -1,0 +1,19 @@
+﻿<nav class="slds-nav-vertical slds-p-horizontal_x-small">
+    <div class="slds-form-element">
+        <label class="slds-form-element__label slds-assistive-text" for="input-id-01">Filter navigation items</label>
+        <div class="slds-form-element__control">
+            <input type="search" placeholder="Quick Find" class="slds-input" />
+        </div>
+    </div>
+    <app-icon icon="utility:new"></app-icon>
+    <div class="slds-nav-vertical__section">
+        <ul>
+            <li class="slds-nav-vertical__item" ng-class="{'slds-is-active':$index==selectedIndex}" ng-repeat="item in items" ng-click="selectItem($index)">
+                <a href="javascript:void(0);" class="slds-nav-vertical__action slds-button--icon slds-button--icon-container slds-button--icon-small slds-global-header__button--icon" aria-describedby="entity-header" aria-current="page">
+                    <app-icon icon="{{item.icon}}" class="slds-button__icon slds-global-header__icon"></app-icon>
+                    {{item.label}}
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

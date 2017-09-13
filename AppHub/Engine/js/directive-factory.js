@@ -621,3 +621,83 @@ app.directive("appTab", function ($server) {
         }]
     };
 });
+app.directive("appIcon", function ($server) {
+    return {
+        scope: {
+            icon: '@',
+            size: '@',
+            title: '@',
+            class: '@'
+        },
+        templateUrl: $server.getPath() + "/Engine/templates/app-icon.html",
+        controller: ["$scope","$element", function ($scope,$element) {
+            $scope.iconFamily = $scope.icon.split(":")[0];
+            $scope.iconName = $scope.icon.split(":")[1].split('_').join('-');
+            $element.find("use").attr("xlink:href", "Content/slds/assets/icons/" + $scope.iconFamily + "-sprite/svg/symbols.svg#" + $scope.icon.split(":")[1]);
+        }]
+    };
+});
+app.directive("appPageHeader", function ($server) {
+    return {
+        scope: {
+            pageName: '@',
+            description: '@',
+            icon: '@'
+        },
+        templateUrl: $server.getPath() + "/Engine/templates/app-page-header.html"
+    };
+});
+app.directive("appNavigation", function ($server) {
+    return {
+        scope: {
+            items: '=',
+            selectedItem: '='
+        },
+        templateUrl: $server.getPath() + "/Engine/templates/app-navigation.html",
+        controller: ["$scope", function ($scope) {
+            $scope.selectItem = function (index) {
+                $scope.selectedIndex = index;
+                $scope.selectedItem = $scope.items[index];
+            }
+        }]
+    };
+});
+app.directive("appSpinner", function ($server) {
+    return {
+        templateUrl: $server.getPath() + "/Engine/templates/app-spinner.html"
+    };
+});
+app.directive("appToaster", function ($server) {
+    return {
+        scope:{
+            type: '@',
+            messege:'@'
+        },
+        templateUrl: $server.getPath() + "/Engine/templates/app-toaster.html",
+        controller: ["$scope","$element", function ($scope,$element) {
+            $scope.removeTime;
+            $scope.init = function () {
+                switch ($scope.type) {
+                    case 'info':
+                        $scope.removeTime = 5000;
+                        break;
+                    case 'success':
+                        $scope.removeTime = 5000;
+                        break;
+                    case 'warning':
+                        $scope.removeTime = 10000;
+                        break;
+                }
+                if ($scope.removeTime) {
+                    setTimeout(function () {
+                        $scope.removeToaster();
+                    },$scope.removeTime);
+                }
+            }
+            $scope.removeToaster = function () {
+                $element.remove();
+            }
+            $scope.init();
+        }]
+    };
+});

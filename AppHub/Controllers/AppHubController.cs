@@ -8,9 +8,9 @@ namespace AppHub.Controllers
 {
     public class AppHubController : Controller
     {
-        // GET: AppHub
         public ActionResult Index()
         {
+            ViewBag.appName = "AppHub";
             return View();
         }
     }

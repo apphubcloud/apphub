@@ -2,16 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace AppHub.Controllers
 {
     public class Database
     {
+        public static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["cs"].ConnectionString);
+        public static SqlDataAdapter da;
+        public static SqlCommand cmd;
+        public static DataSet ds;
+        public static DataRow dr;
         public static DatabaseResult query(String query) 
         {
             try
             {
-                return null;
+                cmd = new SqlCommand(query, con);
+                da = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                da.Fill(ds);
+                return new DatabaseResult(ds.Tables[0]);
             }
             catch (Exception ex) 
             {

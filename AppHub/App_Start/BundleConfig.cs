@@ -27,6 +27,8 @@ namespace AppHub
 
             bundles.Add(new ScriptBundle("~/resource/apphub_js").Include(
                       "~/AppHub/js/apphub.js",
+                      "~/AppHub/js/apphub-engine.js",
+                      "~/AppHub/js/schema-builder.js",
                       "~/AppHub/js/dashboard.js"));
         }
     }

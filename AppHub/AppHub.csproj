@@ -40,6 +40,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -103,9 +107,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -158,7 +159,7 @@
     <Compile Include="Controllers\AppHubController.cs" />
     <Compile Include="Controllers\Database.cs" />
     <Compile Include="Controllers\DatabaseResult.cs" />
-    <Compile Include="Controllers\EngineController.cs" />
+    <Compile Include="Controllers\ApphubEngineController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -167,7 +168,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppHub\js\apphub.js" />
+    <Content Include="AppHub\js\apphub-engine.js" />
+    <Content Include="AppHub\js\schema-builder.js" />
     <Content Include="AppHub\js\dashboard.js" />
+    <Content Include="AppHub\templates\schema-builder.html" />
     <Content Include="AppHub\templates\dashboard.html" />
     <Content Include="Content\angular\angular.js" />
     <Content Include="Content\font-awesome\css\font-awesome.css" />
@@ -2316,6 +2320,7 @@
     <Content Include="Engine\templates\app-field-validator.html" />
     <Content Include="Engine\templates\app-footer.html" />
     <Content Include="Engine\templates\app-header.html" />
+    <Content Include="Engine\templates\app-icon.html" />
     <Content Include="Engine\templates\app-input-date.html" />
     <Content Include="Engine\templates\app-input-datetime.html" />
     <Content Include="Engine\templates\app-input-field.html" />
@@ -2325,10 +2330,14 @@
     <Content Include="Engine\templates\app-input-text.html" />
     <Content Include="Engine\templates\app-input-textarea.html" />
     <Content Include="Engine\templates\app-input-time.html" />
+    <Content Include="Engine\templates\app-navigation.html" />
+    <Content Include="Engine\templates\app-page-header.html" />
+    <Content Include="Engine\templates\app-spinner.html" />
     <Content Include="Engine\templates\app-tab.html" />
     <Content Include="Engine\templates\app-table.html" />
     <Content Include="Engine\templates\app-tabs.html" />
     <Content Include="Engine\templates\app-timepicker.html" />
+    <Content Include="Engine\templates\app-toaster.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\slds\assets\fonts\SalesforceSans-Bold.ttf" />

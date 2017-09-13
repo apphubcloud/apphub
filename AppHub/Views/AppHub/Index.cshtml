@@ -6,14 +6,18 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AppHub</title>
+    <title>@ViewBag.appName</title>
     @Styles.Render("~/resource/vendor_css")
     @Styles.Render("~/resource/engine_css")
 
     @Scripts.Render("~/resource/vendor_js")
     @Scripts.Render("~/resource/engine_js")
     @Scripts.Render("~/resource/apphub_js")
+    <script type="text/javascript">
+        const apiName = '@ViewBag.appName';
+    </script>
 </head>
+
 <body ng-app="apphub" ng-controller="apphub-controller">
     <app-header name="applicationName" tabs="tabs"></app-header>
     <div style="margin-top:90px">

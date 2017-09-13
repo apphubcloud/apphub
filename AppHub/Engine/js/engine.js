@@ -9,6 +9,11 @@ app.service("$engine", function ($http) {
             dataType: 'json',
         }).then(function success(response) {
             if (response.statusText == "OK") {
+                if (response.data.success) {
+                    onsuccess(response.data.data);
+                } else {
+                    onerror(response.data.messege);
+                }
                 onsuccess(response.data);
             } else {
                 onerror(response.messege);
@@ -16,8 +21,5 @@ app.service("$engine", function ($http) {
         }, function error(response) {
             onerror(response.message);
         });
-    },
-    this.test = function (arguments,onsuccess,onerror) {
-        this.execute("/Engine/Test", arguments, onsuccess, onerror)
     }
 })
